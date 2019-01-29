@@ -19,9 +19,9 @@
   <div class="form-group">
     <label for="Director">Id Director</label>
     <select>
-      @foreach($directors as $director)
-      <option>{{ $director->nombre }}</option>
-      @endforeach
+    @foreach($directores as $director)
+    <option>{{ $director->nombre }}</option>
+    @endforeach
     </select>
   </div>
   <button type="submit" class="btn btn-primary">Añadir película</button>

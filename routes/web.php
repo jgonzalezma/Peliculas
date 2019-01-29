@@ -16,6 +16,7 @@ Route::get('/nuevaPelicula', function(){
 	return view('nuevaPelicula');
 });
 
+Route::get('/nuevaPelicula', 'directorController@listarDirectores');
 Route::post('/nuevaPelicula', 'peliculasController@createPelicula')->name('crearPeli');
 
 Route::get('/nuevoDirector', function(){
@@ -23,3 +24,4 @@ Route::get('/nuevoDirector', function(){
 });
 
 Route::post('/nuevoDirector', 'directorController@createDirector')->name('nuevoDir');
+
