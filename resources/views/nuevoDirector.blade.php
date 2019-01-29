@@ -10,7 +10,7 @@
   @csrf
   <div class="form-group">
     <label for="nombre">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Inserta el nombre">
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Inserta el nombre" required>
   </div>
   <button type="submit" class="btn btn-primary">Añadir director</button>
   <a href="/" type="button" class="btn btn-success">Volver atrás</a>

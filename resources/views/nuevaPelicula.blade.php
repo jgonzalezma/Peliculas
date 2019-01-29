@@ -10,17 +10,17 @@
   @csrf
   <div class="form-group">
     <label for="nombre">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Inserta el nombre">
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Inserta el nombre" required>
   </div>
   <div class="form-group">
     <label for="duracion">Duración</label>
-    <input type="number" min="0" name="duracion">
+    <input type="number" min="0" name="duracion" required>
   </div>
   <div class="form-group">
     <label for="Director">Id Director</label>
-    <select>
+    <select name="director">
     @foreach($directores as $director)
-    <option>{{ $director->nombre }}</option>
+    <option value="{{ $director->id }}">{{ $director->nombre }}</option>
     @endforeach
     </select>
   </div>

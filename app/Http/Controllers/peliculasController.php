@@ -17,7 +17,7 @@ class peliculasController extends Controller
     	$pelicula = new Pelicula();
     	$pelicula->nombre = $request->input('nombre');
         $pelicula->duracion = $request->input('duracion');
-    	$pelicula->director = $request->input('director');
+    	$pelicula->director_id = $request->get('director');
     	$pelicula->save();
         return back();
     }

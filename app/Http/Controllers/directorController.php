@@ -17,6 +17,8 @@ class directorController extends Controller
     	$directores = Director::all();
     	return view('nuevaPelicula')->with([
     		'directores'=>$directores
+    		
     	]);
+    	return redirect('/');
     }
 }
