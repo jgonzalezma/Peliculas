@@ -11,11 +11,6 @@ class peliculasController extends Controller
 		$peliculas = Pelicula::all();
 		$peliculas = Pelicula::orderBy('nombre', 'asc')->get();
 		$numPeliculas = count($peliculas);
-		$avgDuracion = [];
-		foreach($peliculas as $pelicula){
-			array_push($avgDuracion, $pelicula->duracion);
-		}
-		$avgTotal = avg($avgDuracion);
     	return view('listaPeliculas')->with([
 			'peliculas'=>$peliculas,
 			'numPeliculas' => $numPeliculas
