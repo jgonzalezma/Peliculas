@@ -24,6 +24,13 @@
     @endforeach
   </tbody>
 </table>
+
+<td><h3>Peliculas en total: {{ $numPeliculas }}</h3></td>
+<td><h3>Duración máxima:</h3></td>
+<td><h3>Duración mínima:</h3></td>
+<td><h3>Duración media:</h3></td>
+</tr>
+</table>
 <a href="/nuevaPelicula" class="btn btn-primary">Añadir pelicula</a>
 <a href="/nuevoDirector" class="btn btn-warning">Añadir director</a>
 </body>

@@ -8,9 +8,17 @@ use App\Pelicula;
 class peliculasController extends Controller
 {
     public function listarPeliculas(){
-    	$peliculas = Pelicula::all();
+		$peliculas = Pelicula::all();
+		$peliculas = Pelicula::orderBy('nombre', 'asc')->get();
+		$numPeliculas = count($peliculas);
+		$avgDuracion = [];
+		foreach($peliculas as $pelicula){
+			array_push($avgDuracion, $pelicula->duracion);
+		}
+		$avgTotal = avg($avgDuracion);
     	return view('listaPeliculas')->with([
-    		'peliculas'=>$peliculas
+			'peliculas'=>$peliculas,
+			'numPeliculas' => $numPeliculas
     	]);
     }
     public function createPelicula(Request $request){
