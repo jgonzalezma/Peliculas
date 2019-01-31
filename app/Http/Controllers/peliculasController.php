@@ -23,5 +23,11 @@ class peliculasController extends Controller
     	$pelicula->director_id = $request->get('director');
     	$pelicula->save();
         return back();
-    }
+	}
+	public function listarTarantino(){
+		$peliculasTarantino = Pelicula::where('director_id', 1)
+		->orderBy('nombre', 'asc')
+		->get();
+		return view('peliculasTarantino')->with(['peliculasTarantino' => $peliculasTarantino]);
+	}
 }

@@ -15,19 +15,16 @@
     </tr>
   </thead>
   <tbody>
-  	@foreach($peliculas as $pelicula)
+  	@foreach($peliculasTarantino as $peliculaTarantino)
     <tr>
-      <td>{{ $pelicula->nombre }}</td>
-      <td>{{ $pelicula->director->nombre }}</td>
-      <td>{{ $pelicula->duracion }}</td>
+      <td>{{ $peliculaTarantino->nombre }}</td>
+      <td>{{ $peliculaTarantino->director->nombre }}</td>
+      <td>{{ $peliculaTarantino->duracion }}</td>
     </tr>
     @endforeach
   </tbody>
 </table>
 
-<a href="/nuevaPelicula" class="btn btn-primary">Añadir pelicula</a>
-<a href="/nuevoDirector" class="btn btn-warning">Añadir director</a>
-<a href="/pelisTarantino" class="btn btn-danger">Lista de peliculas de Tarantino</a>
-<h3>Peliculas en total: {{ $numPeliculas }}</h3>
+<a href="/" class="btn btn-primary">Volver atrás</a>
 </body>
 </html>

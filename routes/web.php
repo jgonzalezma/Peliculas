@@ -25,3 +25,5 @@ Route::get('/nuevoDirector', function(){
 
 Route::post('/nuevoDirector', 'directorController@createDirector')->name('nuevoDir');
 
+Route::get('/pelisTarantino', 'peliculasController@listarTarantino')->name('tarantino');
+
